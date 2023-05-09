@@ -1,0 +1,21 @@
+https://github.com/nanoninja/docker-nginx-php-mysql
+
+# sudo setenforce 0
+# sudo sestatus -v
+
+/home/syoo/Documents/Docker/docker-nginx-php-mysql
+$ cat docker-compose.yml
+$ docker-compose version
+$ docker-compose config
+$ docker-compose ps
+$ docker-compose up -d
+$ docker-compose logs
+$ docker-compose down -v
+
+http://localhost:8000
+https://localhost:3000 (HTTPS not configured by default)
+http://localhost:8080 PHPMyAdmin (username: dev, password: dev) root/root
+
+*** MySQL Install Module in nanoninja/php-fpm ***
+FROM php:7.0.1-apache
+RUN apt-get update && apt-get install -y mysql-client libmysqlclient-dev docker-php-ext-install mysqli
